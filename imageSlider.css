@@ -1,0 +1,80 @@
+.image-slider{
+    position: relative;
+    background: black;
+}
+.image-slider img{
+    width: 100%;
+    display: block;
+}
+.image-slider img.opacity-transition{
+    transition: opacity 0.3s ease-in-out;
+}
+.image-slider img.hidden{
+    opacity: 0;
+}
+.image-slider img:not(.height-reference){
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.image-slider .controls .back,
+.image-slider .controls .forward{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: white;
+    line-height: 45px;
+    width: 45px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    display: block;
+}
+.image-slider .controls .back:hover,
+.image-slider .controls .forward:hover{
+    background: rgba(0, 0, 0, 0.384);
+}
+.image-slider .controls .back{
+    left: 10px;
+}
+.image-slider .controls .forward{
+    right: 10px;
+}
+.image-slider .controls .indicators{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.image-slider .controls .indicators .indicator{
+    display: block;
+    background: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+}
+.image-slider .controls .indicators .indicator:not(:last-child){
+    margin-right: 10px;
+}
+.image-slider .controls .indicators .indicator::after{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+}
+.image-slider .controls .indicators .indicator:hover::after{
+    background: rgba(0, 0, 0, 0.384);
+    content: "";
+}
+.image-slider .controls .indicators .indicator.active::after{
+    background: rgba(0, 0, 0, 0.671);
+    content: "";
+}
