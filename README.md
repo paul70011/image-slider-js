@@ -12,7 +12,7 @@ Simple image slider for javascript
       ...
     </head>
     ```
-1. Create at leas one `div` with the class `image-slider` and add your images as `<img>` tags
+1. Create at least one `div` with the class `image-slider` and add your images as `<img>` tags
     ```html
     <div class="image-slider">
       <img src="img1.jpg">
